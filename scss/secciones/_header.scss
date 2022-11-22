@@ -1,0 +1,27 @@
+.mi-header{
+    background-color: $c-sec;
+    &__banner{
+        width: 100%;
+    }
+    &__titulo{
+        @include typo ($titulos, 3.438rem, $bg-mn, 0.938rem, center, none);
+        animation-name: titulo-pagina;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    &__ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0.938rem;
+        &--li{
+            @include typo ($txt, 1.063rem, $bg-mn, 0.625rem, none, none)
+        }
+        &--li:hover{
+            color: $bg-fr;
+        }
+    }
+
+}

@@ -1,0 +1,208 @@
+// index
+
+.mi-main{
+    background-color: $bg-mn;
+    background-image: linear-gradient($bg-mn, $bg-hr, $bg-fr, $bg-mn);
+    padding: 1.25rem;
+    &__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--img{
+            height: 15.625rem;
+            object-fit: cover;
+        }
+    }
+}
+.btn-primary {
+    background-color: #E63B2E;
+    border-color: #ffa500;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.938rem;
+    font-weight: bolder;
+}
+.btn-primary:hover{
+    background-color: cyan;
+}
+// contacto
+
+.mi-main-contacto{
+    background-color: $bg-mn;
+    padding: 1.95rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    &__txt{
+        @include typo ($txt, 1.25rem, $c-txt, 0.625rem, center, none);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 700px;
+        &--span {
+            text-decoration: underline;
+        }
+        text-align: center;
+        max-width: 75vw;
+    } 
+}
+.formulario{
+    max-width: 43.75rem;
+    width: 100%;
+    background: linear-gradient(135deg,#E63B2E,#ffa500);
+    padding: 1.563rem 1.875rem;
+    border-radius: 5px;
+    &__titulo{
+        position: relative;
+        @include typo ($txt, 1.563rem, $bg-mn, 0, none, none);
+    }
+    &__titulo::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 0.188rem;
+        width: 1.875rem;
+        background: linear-gradient(135deg,#ffa500, #E63B2E);
+    }
+    &__form{
+        &--detalle-usuario{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 1.25rem 0 0.75rem 0;
+            .input-box{
+                margin-bottom: 0.938rem;
+                width: calc(100% / 2 - 1.25rem);
+                padding: 0.938rem;
+                .detalle{
+                    font-weight: 500;
+                    margin-bottom: 0.313rem;
+                    display: block;
+                    font-size: 1.25rem;
+                    font-family: $txt;
+                } 
+                input{
+                    height: 2.813rem;
+                    width: 100%;
+                    outline: none;
+                    border-radius: 0.313rem;
+                    border: 0.063rem solid #ccc;
+                    padding-left: 0.938rem;
+                    font-size: 0.938rem;
+                    border-bottom-width: 0.125rem;
+                    transition: all 0.3s ease;
+                }
+                input:focus,
+                input:valid{
+                    border-color: $bg-fr;
+                }
+            }
+        }
+        &--boton{
+            height: 2.813rem;
+            margin: 2.813rem 0;
+            font-family: 'Poppins', sans-serif;
+            input{
+                height: 100%;
+                width: 100%;
+                outline: none;
+                color: antiquewhite;
+                font-size: 1.125rem;
+                font-weight: 500;
+                border-radius: 5px;
+                letter-spacing: 1px;
+                background: linear-gradient(135deg, $bg-fr, $c-sec ); 
+            }
+            input:hover{
+                background: linear-gradient(-135deg, $c-sec, $bg-fr);
+            }
+        }
+    }
+}
+.genero{
+    &__palabra{
+        font-size: 1.25rem;
+        font-weight: 500;
+        font-family: 'Poppins', sans-serif;
+    }
+    &__categoria{
+        display: flex;
+        width: 80%;
+        margin: 14px 0;
+        justify-content: space-between;
+        &--label{
+            display: flex;
+            align-items: center;
+        }
+        &--genero{
+            font-family: 'Poppins', sans-serif;
+        }
+        &--punto{
+            height: 18px;
+            width: 18px;
+            background: #d9d9d9;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 5px solid transparent;
+            transition: all 0.3s ease;
+        }
+    }
+}
+#punto-1:checked~.genero__categoria label .uno,
+#punto-2:checked~.genero__categoria label .dos,
+#punto-3:checked~.genero__categoria label .tres{
+        border-color: #d9d9d9;
+        background: black;
+}
+form input[type="radio"]{
+    display: none;
+}
+
+// carrusel-productos, respeto clases para css.
+
+.mainc{
+    background-color: black;
+    margin: 0px;
+    &__carrusel{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    .carousel{
+        width: 50rem;
+    }
+    .w-100{
+        height: 37.5rem;
+    }
+    .mi-boton{
+        padding: 25px;
+    }
+    .mi-boton-a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.25rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bolder;
+    }
+    &__p{
+        @include typo ($txt, 1.25rem, $c-txt, 0.313rem, none, none);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 700px;
+        
+    }
+    img, svg {
+        vertical-align: middle;
+        object-fit: contain;
+    }
+}
+
+
+
+
+
+
+        
+
