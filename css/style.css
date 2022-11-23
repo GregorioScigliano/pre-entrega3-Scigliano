@@ -278,7 +278,10 @@ form input[type="radio"] {
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "mi-img1 mi-img1 mi-img1 texto1 texto1" "texto2 texto2 mi-img2 mi-img2 mi-img2" "mi-img3 mi-img3 mi-img3 texto3 texto3" ". video video video ."; }
+    grid-template-areas: "mi-img1 mi-img1 mi-img1 texto1 texto1"
+ "texto2 texto2 mi-img2 mi-img2 mi-img2"
+ "mi-img3 mi-img3 mi-img3 texto3 texto3"
+ ". video video video ."; }
     .mi-container__img {
       width: 100%;
       padding: 1.25rem; }
@@ -320,3 +323,20 @@ form input[type="radio"] {
       grid-area: texto3; }
     .mi-container .mi-container__video {
       grid-area: video; } }
+
+.aBoton {
+  text-decoration: none;
+  color: #000000;
+}
+
+.txtCarrito {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 1.25rem;
+  color: black;
+  padding: 0.313rem;
+  text-align: none;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+}
